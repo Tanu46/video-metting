@@ -1,0 +1,348 @@
+@import url('https://fonts.google.com/css2?family=Lato&display+swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'lato',sans-serif;
+}
+body{
+    background: #ffff;
+    width: 100%;
+    padding:0;
+    overflow:hidden;
+}
+body.active{
+    padding-right: 25rem;
+}
+.chat{
+    position: absolute;
+    bottom: 10%;
+    right: -4%;
+     height: 71%; 
+     width: 23rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 10px;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    background: #f5f2f2;
+}
+.chat.active{
+    right: 0;
+   
+}
+.chat h4{
+    color: #333;
+    font-size: 1.5em;
+}
+.chat .chatting{
+    display: flex;
+    flex-direction: column;
+}
+.chat .message{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+  
+}
+.chat img{
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+}
+.chat .message img{
+  position: relative;
+   /* height: 50px;  */
+   /* width: 20px;  */
+   /* border-radius: 50%;  */
+  object-fit: cover; 
+  margin-right: 10px;
+}  
+.chat .chatting .message img{
+    position: relative;
+    width:0px;
+      height: 0px; 
+   border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+.chat .message div{
+    background: #fff;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 5px;
+     box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51,51, 0.2); 
+ 
+}
+.chat .send{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0.2rem 0.2rem 1rem rgb(255, 245, 245);
+}
+.chat .send a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.4em;
+    color: #333;
+    border-radius: 4px;
+}
+.chat .send .input{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.chat .send a.btn{
+    background: #1e64fc;
+    color: #fff;   
+}
+.chat .send a ion-icon{
+    transition: 0.5s cubic-bezier(-5,1.75,.75,1.25);
+}
+/* ------------------------- */
+body .container{
+    min-height: 100%;
+    width: 100%;
+}
+body .container .Video{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .container .Video header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px;
+    z-index: 10;
+}
+body.active .container .Video header{
+    width: 100%;
+    justify-content: flex-start;
+}
+body .container .Video header .logo{
+    font-size: 2em;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    margin:30px;  
+}
+body .container .Video header .info{
+    background: #f5f2f2;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+body .container .Video header .info p{
+    color: #555050;
+}
+body .container .Video header .info  .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+     
+}
+body .container .Video header .info .icons a{
+     height: 50%; 
+     width: 50%; 
+    background: #fff;
+     border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4em;
+    margin-right: 10px;
+    margin-right: 20px;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51,51, 0.2);
+    transition: 0.5s ease;
+}
+body .container .Video header .info .icons a:hover{
+    background: #333; 
+     color: #fff; 
+    
+}
+/* HEADER END */
+/* VIDEObox */
+body .container .Video .videoBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .container .Video .videoBx .img{
+    width: 580%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -6px;
+}
+body .container .Video .videoBx .img .user{
+    position: relative;
+    height: 400px;
+    width: 50%;
+    object-fit: cover;
+}
+body .container .Video .videoBx .img .imgBx{
+    position: relative;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    left: -4%;
+}
+body .container .Video .videoBx .img .imgBx img{
+    height: 50%;
+    width: 40%;
+    object-fit: cover;
+    margin:5px;
+    padding: 0;
+    /* margin:10px; */
+  
+}
+/* body active */
+body.active .container .video .videoBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.active .container .Video .videoBx .img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body.active .container .Video .videoBx .img .user{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+body.active .container .Video .videoBx .img .imgBx
+{
+    position: absolute;
+    top: 20;
+    right: 90;
+    height: 100%;
+    width: 70px;
+}
+body.active .container .Video .videoBx .img .imgBx img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+body .container .Video .btns{
+    position:absolute;
+    bottom: 5;
+    left: 20;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f2f2;
+    border-radius: 10px;
+    padding: 20px;
+}
+body .container .Video .btns a{
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 1.3em;
+    color: #333;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(51,51,51,0.2); 
+}
+ body .container .Video .btns a.red{
+    color: #fff;
+    background: #ee3232;
+} 
+body .container .Video .btns a.red:hover{
+    color: #fff;
+    background: #ee3232;
+} 
+body .container .Video .btns a:hover{
+    background: #333;
+    color: #fff;
+}
+body .container .Video .btns a ion-icon{
+    transition: 0.5s cubic-bezier(-5,1.75,.75,1.25);
+}
+body .container .Video .btns a:hover ion-icon{
+    transform: rotate(360deg);
+}
+@media (max-width:100px)
+{
+    body .chat.active{
+        padding-right: 20rem;
+    }
+    body .container .video .videoBx .img{
+        flex-direction: column;
+    }
+    body .container .video .videoBx .img .imgBx {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+    body .container .video .videoBx .img .imgBx img{
+        height: 20%;
+        width: 20%;
+    }
+    body .container .video .videoBx .img .user{
+        position: relative;
+        height: 346px;
+        width: auto;
+    }
+    .chat {
+        width: 20rem;
+    }
+    body.active  .container .video .videoBx .img .imgBx {
+        right: 0;
+        top: 30%;
+        width: 100%;
+    }
+}
+@media (max-width:800px){
+    body.active{
+        padding: 0;
+    }
+    .chat{
+        bottom: 0;
+        width: 20rem;
+        height: 600px;
+        box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51,51, 0.2);  ;
+    }
+}
